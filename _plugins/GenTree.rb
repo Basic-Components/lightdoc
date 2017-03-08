@@ -1,16 +1,17 @@
+# -*- coding: UTF-8 -*-
 # 扫描docs目录生成HTML文件目录树
 # author: Guangqing Li
 # email: 469379004@qq.com
-# -*- coding: UTF-8 -*-
-
 module Reading
   require 'digest/sha1'
   require 'find'
   class Generator < Jekyll::Generator
 
-    @@debug = false # 调试模式下，始终重新生成目录文件
+    @@debug = true # 调试模式下，始终重新生成目录文件
 
     @@docs_root_dir = File.dirname(__FILE__) + "/../docs"
+
+    @@site = nil;# Jekyll::Site对象
 
     def generate(site)
       puts "\r\n====== Generating sidebar directory tree...... ======"
@@ -44,6 +45,7 @@ module Reading
       end
 
       # 遍历数组
+      @@site = site
       fp = File.new(File.join(File.dirname(__FILE__),'/../_includes',"gen_sidebar.html"),"w+")
       fp.puts('<ul>')
       traverse(@@docs_root_dir,fp)
@@ -88,6 +90,8 @@ module Reading
           path = filepath.split('..')
           str = path[1]  # => /docs/dir/document.md
           path = str.split('.md')
+          path = str.split('.html')
+          print path
           # 获取用于显示的文件名，不包括后缀和路径
           if filepath =~ /.*\.md$/i then
             basename = File::basename(filepath, '.md')
@@ -95,7 +99,15 @@ module Reading
           if filepath =~ /.*\.html$/i then
             basename = File::basename(filepath, '.html')
           end
-          str = '<li><a href="'+path[0]+'">'+basename+'</a></li>'
+          # 用户设置了baseurl的情况
+          if @@site.baseurl != '' then
+            # 移除路径中开头的多余的斜杠，这样才能使用baseurl
+            str = path[0]
+            puts path = str.slice(1,str.length)
+            str = '<li><a href="'+ @@site.baseurl + path +'">'+basename+'</a></li>'
+          else
+            str = '<li><a href="' + path[0]+'">'+basename+'</a></li>'
+          end
           fp.puts(str.encode("utf-8"))
         end
       end
