@@ -4,7 +4,7 @@ by Guangqing Li
 
 项目更新日期：2017-03-08
 
-这是我为自己的团队基于 Jekyll 开发的文档系统。设计初衷是快速得到一个简单可用的文档系统，并部署在免费的Pages服务中。必须声明的是，这可能不适合大家的需求，毕竟是自己内部使用然后拿出来开源的，还请大家见谅。
+这是我为自己的团队基于 Jekyll 开发的文档系统。必须声明的是，这可能不适合大家的需求，毕竟是自己内部使用然后拿出来开源的，还请大家见谅。
 
 - **演示地址** https://clyoko.coding.me/lightdoc
 - **Coding** https://coding.net/u/clyoko/p/lightdoc/git
