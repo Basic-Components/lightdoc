@@ -4,7 +4,9 @@ by Guangqing Li
 
 项目更新日期：2017-03-08
 
-这是我为自己的团队基于 Jekyll 开发的文档系统。必须声明的是，这可能不适合大家的需求，毕竟是自己内部使用然后拿出来开源的，还请大家见谅。
+一个基于 Jekyll 开发的文档系统。
+
+必须声明的是，这是我为自己团队开发的工具，内部使用拿出来开源的东西，可能不太适合大家的需求，还请大家见谅。
 
 - **演示地址** https://clyoko.coding.me/lightdoc
 - **Coding** https://coding.net/u/clyoko/p/lightdoc/git
@@ -45,7 +47,7 @@ Coding Pages 和 GitHub Pages 将会自动部署你的文档。
 
 例如，文件 a.jpg 存放`/images`目录中。
 
-- 如果使用自己的域名直接访问项目（推荐，我的团队文档系统就是这样做的）
+- 如果使用自己的域名直接访问项目（推荐，我团队里用的就是这样做的）
 在md文档中这样写`![这是图片](images/a.jpg)`。
 
 - 如果使用带目录的域名访问就会麻烦些，如本项目演示地址：https://clyoko.coding.me/lightdoc
@@ -53,7 +55,7 @@ Coding Pages 和 GitHub Pages 将会自动部署你的文档。
 
 ## 方便大家
 
-这里给出一些我在Windows安装Jekyll的[文档](https://clyoko.coding.me/lightdoc/docs/Windows安装Jekyll)
+这里给出一些我在Windows安装Jekyll的文档[点击打开](https://clyoko.coding.me/lightdoc/docs/Windows安装Jekyll)
 
 ## 注意事项
 
