@@ -4,9 +4,8 @@ title: LightDoc 演示
 email: 469379004@qq.com
 keywords: lightdoc,jekyll,文档,document,ruby,api
 description: LightDoc是一个基于Jekyll开发的文档系统。
-baseurl: "/lightdoc/"
-url: "https://clyoko.coding.me"
-#github_username:  clyoko
+baseurl: "/lightdoc/" # 域名xxx.com直接访问本项目的填'/'，带目录域名xxx.com/example访问本项目的填'/example/'
+url: "https://clyoko.coding.me" # 域名
 exclude:  ["README.md",".git",".idea"]
 # Build settings
 markdown: kramdown
