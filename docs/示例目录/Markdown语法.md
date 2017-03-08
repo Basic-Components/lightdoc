@@ -5,7 +5,7 @@ title: LightDoc
 
 # Markdown 语法
 
-![图片](images/logo.png)
+![图片](/lightdoc/images/logo.png)
 
 [TOC]
 

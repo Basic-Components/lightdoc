@@ -9,9 +9,10 @@ by Guangqing Li
 
 项目更新日期：2017-03-08
 
-这是我为自己的团队基于 Jekyll 开发的文档系统。必须声明的是，这可能不适合大家的需求，毕竟是自己内部使用然后拿出来开源的，还请大家见谅。
+这是我为自己的团队基于 Jekyll 开发的文档系统。设计初衷是快速得到一个简单可用的文档系统，并部署在免费的Pages服务中。必须声明的是，这可能不适合大家的需求，毕竟是自己内部使用然后拿出来开源的，还请大家见谅。
 
-**演示地址:** https://clyoko.coding.me/lightdoc
+- **演示地址** https://clyoko.coding.me/lightdoc
+- **Coding** https://coding.net/u/clyoko/p/lightdoc/git
 
 首先要说明的是，本项目需要本地构建操作（部署到自己的服务器除外）。
 
@@ -28,12 +29,12 @@ by Guangqing Li
 1. 下载项目到本地。
 2. 书写你的文档，在文档开头加入下面这个固定的头信息，存放到`/docs`目录中。
 
-```
+<pre>
 ---
 layout: default
 title: 你的文章标题
 ---
-```
+</pre>
 
 3. 在项目目录中执行命令`jekyll build`来生成目录树。（部署到自己的服务器时可省略）
 4. Push 到你的 Git 仓库
@@ -43,11 +44,21 @@ Coding Pages 和 GitHub Pages 将会自动部署你的文档。
 ## 目录说明
 
 - `/docs` 用户文档目录，允许多级目录，文件(夹)名允许中文。
-- `images` 用户图片目录。如文件`a.jpg`，在md文档中这样使用`![这是图片](images/a.jpg)`。
+- `/images` 用户图片目录。
+
+## 在 Markdown 中使用图片
+
+例如，文件 a.jpg 存放`/images`目录中。
+
+- 如果使用自己的域名直接访问项目（推荐，我的团队文档系统就是这样做的）
+在md文档中这样写`![这是图片](images/a.jpg)`。
+
+- 如果使用带目录的域名访问就会麻烦些，如本项目演示地址：https://clyoko.coding.me/lightdoc
+在md文档中这样写`![这是图片](/lightdoc/images/a.jpg)`。
 
 ## 方便大家
 
-这里给出一些我在Windows安装Jekyll的文档。http://
+这里给出一些我在Windows安装Jekyll的[文档](https://clyoko.coding.me/lightdoc/docs/Windows安装Jekyll)
 
 ## 注意事项
 

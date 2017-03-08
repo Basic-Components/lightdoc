@@ -6,6 +6,6 @@ keywords: lightdoc,jekyll,文档,document,ruby,api
 description: LightDoc是一个基于Jekyll开发的文档系统。
 baseurl: "/lightdoc/" # 域名xxx.com直接访问本项目的填'/'，带目录域名xxx.com/example访问本项目的填'/example/'
 url: "https://clyoko.coding.me" # 域名
-exclude:  ["README.md",".git",".idea"]
+exclude:  [".git",".idea"]
 # Build settings
 markdown: kramdown

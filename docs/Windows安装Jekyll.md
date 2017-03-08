@@ -7,13 +7,9 @@ title: LightDoc
 
 本文章针对Windows用户，说明Windows下如何安装环境并构建本项目。
 
-[TOC]
-
 >参考原文：http://jekyll-windows.juthilo.com/
 
-## 环境安装
-
-### 安装 Ruby
+## 安装 Ruby
 
 网址：http://rubyinstaller.org/
 
@@ -21,7 +17,7 @@ title: LightDoc
 
 记得勾选环境变量。
 
-### 安装 DevKit
+## 安装 DevKit
 
 网址：http://rubyinstaller.org/downloads/
 
