@@ -30,7 +30,7 @@ title: 你的文章标题
 ---
 ```
 
-3. 执行命令 `jekyll build`（部署到自己的服务器时可省略）
+3. 在项目目录中执行命令`jekyll build`来生成目录树。（部署到自己的服务器时可省略）
 4. Push 到你的 Git 仓库
 
 Coding Pages 和 GitHub Pages 将会自动部署你的文档。
