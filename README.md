@@ -25,7 +25,7 @@ by Guangqing Li
 
 1. 下载项目到本地。
 2. 书写你的文档，在文档开头加入下面这个固定的头信息，存放到`/docs`目录中。
-![头信息](/lightdoc/images/head_info.png)
+![头信息](https://clyoko.coding.me/lightdoc/images/head_info.png)
 3. 按照你的实际情况（域名、网站名称等信息），修改_config.yml文件
 4. 在项目目录中执行命令`jekyll build`来生成目录树。（部署到自己的服务器时可省略）
 5. Push 到你的 Git 仓库
