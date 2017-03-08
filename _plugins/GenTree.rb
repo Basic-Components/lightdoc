@@ -89,8 +89,12 @@ module Reading
           # 获取用于跳转的路径+文件名，不包括后缀（jekyll URL特性）
           path = filepath.split('..')
           str = path[1]  # => /docs/dir/document.md
-          path = str.split('.md')
-          path = str.split('.html')
+          if str.index('.md') then
+            path = str.split('.md')
+          end
+          if str.index('.html') then
+            path = str.split('.html')
+          end
           # 获取用于显示的文件名，不包括后缀和路径
           if filepath =~ /.*\.md$/i then
             basename = File::basename(filepath, '.md')
