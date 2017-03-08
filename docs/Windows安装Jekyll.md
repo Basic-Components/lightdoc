@@ -1,6 +1,6 @@
 ---
 layout: default
-title: LightDoc
+title: Windows安装Jekyll
 ---
 
 # Windows安装Jekyll
