@@ -1,0 +1,130 @@
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+.header {
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    padding-left: 20px;
+    padding-top: 10px;
+    border-bottom: 1px #ccc solid;
+    font: 30px "微软雅黑";
+    z-index: 1000;
+    background: #fff;
+}
+
+.header a {
+    color: #000;
+}
+
+.header a:hover {
+    color: #0077cc;
+}
+
+.left {
+    position: fixed;
+    left: 0;
+    top: 60px;
+    bottom: 0;
+    width: 280px;
+    border-right: 1px #ccc solid;
+    border-top: 0;
+    background-color: #fff;
+    z-index: 999;
+}
+
+/*搜索栏样式*/
+#search {
+    width: 200px;
+    margin-top: 15px;
+    margin-left: 20px;
+    padding: 10px 14px;
+    border: 1px #ccc solid;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+}
+
+/*目录树样式*/
+#jstree {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-bottom: 20px;
+    overflow: auto;
+}
+
+/*扩展a标签宽度，使得整个li范围可以点击跳转*/
+.jstree-default a {
+    width: calc(100% - 35px);
+}
+
+/*jstree默认鼠标经过样式*/
+.jstree-default .jstree-wholerow-hovered {
+    background: #ddd;
+}
+
+/*jstree默认鼠标点击样式，不需要用到故白色清空*/
+.jstree-default .jstree-wholerow-clicked {
+    background: #fff;
+}
+/*当前打开页面对应的项标记激活状态*/
+.jstree-default .li-div-active {
+    background: #008ae6;
+}
+
+.jstree-default .atag-active {
+    color: #fff;
+}
+
+/*右侧主体部分*/
+.right {
+    position: absolute;
+    top: 60px;
+    left: 280px;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+}
+
+.title {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px 0;
+    border-bottom: 1px #ccc solid;
+    font: 25px "微软雅黑";
+    color: #888;
+    text-align: center;
+}
+
+article {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.backtop{
+    position: fixed;
+    right: 40px;
+    bottom: 30px;
+    width: 40px;
+    height: 40px;
+    border: 1px #01a0e4 solid;
+    border-radius: 3px;
+    background: #01a0e4;
+    text-align: center;
+    font-size: 14px;
+}
+
+.backtop a{
+    color: #fff;
+}
