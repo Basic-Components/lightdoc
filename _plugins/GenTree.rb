@@ -7,7 +7,7 @@ module Reading
   require 'find'
   class Generator < Jekyll::Generator
 
-    @@debug = true # 调试模式下，始终重新生成目录文件
+    @@debug = false # 调试模式下，始终重新生成目录文件
 
     @@docs_root_dir = File.dirname(__FILE__) + "/../docs"
 
@@ -91,7 +91,6 @@ module Reading
           str = path[1]  # => /docs/dir/document.md
           path = str.split('.md')
           path = str.split('.html')
-          print path
           # 获取用于显示的文件名，不包括后缀和路径
           if filepath =~ /.*\.md$/i then
             basename = File::basename(filepath, '.md')
@@ -103,7 +102,7 @@ module Reading
           if @@site.baseurl != '' then
             # 移除路径中开头的多余的斜杠，这样才能使用baseurl
             str = path[0]
-            puts path = str.slice(1,str.length)
+            path = str.slice(1,str.length)
             str = '<li><a href="'+ @@site.baseurl + path +'">'+basename+'</a></li>'
           else
             str = '<li><a href="' + path[0]+'">'+basename+'</a></li>'
