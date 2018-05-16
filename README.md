@@ -1,79 +1,32 @@
 # LightDoc
 
-by Guangqing Li
+本项目fork自<https://github.com/hyperqing/lightdoc> 感谢作者Guangqing Li
 
-项目更新日期：2017-03-08
+本项目是个一个比较轻量级的项目文档主题,支持:
 
-一个基于 Jekyll 开发的文档系统。
+1. 按层次组织文档
+2. 流程图
+3. 表格
+4. 数学公式
 
-必须声明的是，这是我为自己团队开发的工具，内部使用拿出来开源的东西，可能不太适合大家的需求，还请大家见谅。欢迎在issue、讨论、评论等提出宝贵的意见或建议。
+特点:
 
-- **演示地址** https://clyoko.coding.me/lightdoc
-- **Coding** https://coding.net/u/clyoko/p/lightdoc/git
+1. 简单轻量
+2. 少有的项目主题
+3. 方便定制
 
-首先要说明的是，本项目需要本地构建操作（部署到自己的服务器除外）。
+## 用法
 
-因为用 Ruby 写了个 Jekyll 插件来生成文件目录树，而 Coding Pages 和 GitHub Pages 在运行 Jekyll 时会带上`--safe`参数，导致插件无法运行。部署到自己的服务器的话，可以允许始终运行插件。
+1. 配置`_config.yml`
 
-故需要自己在本地执行`jekyll build`来构建一遍。提交到 Git 后，无需任何操作，Pages 会自动更新。如果大家有什么便捷方法，还请不吝指教。
+    修改其中的:
+    + `title`: 项目标题
+    + `email`: 项目开发者email
+    + `keywords`: 项目主题
+    + `description`: 项目简介
+    + `baseurl`: 基url,方便那些使用第一级uri区分项目的用法 # 域名xxx.com直接访问本项目的填'/'，带目录域名xxx.com/example访问本项目的填'/example/'
+    + `url`: 项目域名# "http://0.0.0.0:4000" # 域名
 
-[TOC]
-
-## 快速开始
-
-如果你的电脑已经有 Jekyll ，那么只需要
-
-1. 下载项目到本地。
-2. 书写你的文档，在文档开头加入下面这个固定的头信息，存放到`/docs`目录中。
-
-![头信息](https://clyoko.coding.me/lightdoc/images/head_info.png)
-
-3. 按照你的实际情况（域名、网站名称等信息），修改_config.yml文件
-4. 在项目目录中执行命令`jekyll build`来生成目录树。（部署到自己的服务器时可省略）
-5. Push 到你的 Git 仓库
-
-Coding Pages 和 GitHub Pages 将会自动部署你的文档。
-
-## 目录说明
-
-- `/docs` 用户文档目录，允许多级目录，文件(夹)名允许中文。
-- `/images` 用户图片目录。
-
-## 在 Markdown 中使用图片
-
-例如，文件 a.jpg 存放`/images`目录中。
-
-- 如果使用自己的域名直接访问项目（推荐，我团队里用的就是这样做的）
-在md文档中这样写`![这是图片](images/a.jpg)`。
-
-- 如果使用带目录的域名访问就会麻烦些，如本项目演示地址：https://clyoko.coding.me/lightdoc
-在md文档中这样写`![这是图片](/lightdoc/images/a.jpg)`。
-
-## 方便大家
-
-这里给出一些我在Windows安装Jekyll的文档[点击打开](https://clyoko.coding.me/lightdoc/docs/Windows安装Jekyll)
-
-## 注意事项
-
-如果用户文档目录`/docs`中使用中文文件名，在本地调试时可能无法打开相应的页面，在Coding Pages 和 GitHub Pages 可正常打开。
-
-如有大家有解决方案，请多多指教。
-
-## 使用到的项目
-
-感谢这些项目，令本项目得以快速实现。
-
-- jQuery
-- Editor.md
-- jsTree
-- highlight.js
-
-## 参考项目
-
-- Coding Help（https://coding.net/u/coding/p/coding-docs/git）
-- 看云（http://www.kancloud.cn/）
-- ShowDoc（https://www.showdoc.cc/）
-
-## License
-
-Apache License 2.0
+2. 项目主页可以使用`markdown`修改`index.html`文件
+3. 项目文档放在`docs`文件夹下,格式请看例子
+4. 项目的目录通过修改`_includes/gen_sidebar.html`修改

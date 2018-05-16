@@ -5,7 +5,7 @@ title: Markdown 语法
 
 # Markdown 语法
 
-![图片](/lightdoc/images/logo.png)
+![图片](/images/logo.png)
 
 [TOC]
 
@@ -75,3 +75,10 @@ Note right of Bob: Bob thinks
 Bob-->Alice: I am good thanks!
 ```
 
+数学公式
+
+```latex
+\\[ \frac{a} {b} \\]
+```
+
+\\[ \frac{a} {b} \\]

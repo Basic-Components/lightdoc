@@ -1,11 +1,11 @@
 # Site settings
 encoding: utf-8
 title: LightDoc 演示
-email: 469379004@qq.com
+email: hsz1273327@gmail.com
 keywords: lightdoc,jekyll,文档,document,ruby,api
-description: LightDoc是一个基于Jekyll开发的文档系统。
-baseurl: "/lightdoc/" # 域名xxx.com直接访问本项目的填'/'，带目录域名xxx.com/example访问本项目的填'/example/'
-url: "https://clyoko.coding.me" # 域名
+description: LightDoc是一个基于Jekyll开发的项目文档系统。
+baseurl: "/" # 域名xxx.com直接访问本项目的填'/'，带目录域名xxx.com/example访问本项目的填'/example/'
+url: "http://0.0.0.0:4000" # 域名
 exclude:  [".git",".idea"]
 # Build settings
 markdown: kramdown

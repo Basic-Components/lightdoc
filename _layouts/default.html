@@ -1,39 +1,62 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 {% include head.html %}
-<body>
-<div class="header">
-    <a href="{{ site.baseurl }}index.html"><span>{{ site.title }}</span></a>
-</div>
-<div class="content">
-    <div class="left">
-        <input type="text" id="search" placeholder="搜索...">
-        <div id="jstree" style="display: none">
-            {% include gen_sidebar.html %}
-        </div>
-    </div>
-    <div class="right">
-        <div class="title" id="top">{{ page.title }}</div>
-        <article id="page_md_content">
-            <textarea style="display:none;" title="">{{ page.content }}</textarea>
-        </article>
-        <div class="backtop">
-            <a href="#top">回到顶部</a>
-        </div>
 
+<body>
+    <div class="header">
+        <a href="{{ site.baseurl }}index.html">
+            <span>{{ site.title }}</span>
+        </a>
     </div>
-</div>
-<script src="{{ site.baseurl}}js/jquery-3.1.1.min.js"></script>
-<script src="{{ site.baseurl}}js/highlight/highlight.min.js"></script>
-<script src="{{ site.baseurl}}js/editor.md/lib/marked.min.js"></script>
-<script src="{{ site.baseurl}}js/editor.md/lib/prettify.min.js"></script>
-<script src="{{ site.baseurl}}js/editor.md/lib/flowchart.min.js"></script>
-<script src="{{ site.baseurl}}js/editor.md/lib/raphael.min.js"></script>
-<script src="{{ site.baseurl}}js/editor.md/lib/underscore.min.js"></script>
-<script src="{{ site.baseurl}}js/editor.md/lib/sequence-diagram.min.js"></script>
-<script src="{{ site.baseurl}}js/editor.md/lib/jquery.flowchart.min.js"></script>
-<script src="{{ site.baseurl}}js/editor.md/editormd.min.js"></script>
-<script src="{{ site.baseurl}}js/jsTree/jstree.js"></script>
-<script src="{{ site.baseurl}}js/start.js"></script>
+    <div class="content">
+        <div class="left">
+            <input type="text" id="search" placeholder="搜索...">
+            <div id="jstree" style="display: none">
+                {% include gen_sidebar.html %}
+            </div>
+        </div>
+        <div class="right">
+            <div class="title" id="top">{{ page.title }}</div>
+            <article id="page_md_content">
+                <textarea style="display:none;" title="">{{ page.content }}</textarea>
+            </article>
+            <div class="backtop">
+                <a href="#top">回到顶部</a>
+            </div>
+
+        </div>
+    </div>
+    <script src="{{ site.baseurl}}js/jquery-3.1.1.min.js"></script>
+    <script src="{{ site.baseurl}}js/highlight/highlight.min.js"></script>
+    <script src="{{ site.baseurl}}js/editor.md/lib/marked.min.js"></script>
+    <script src="{{ site.baseurl}}js/editor.md/lib/prettify.min.js"></script>
+    <script src="{{ site.baseurl}}js/editor.md/lib/flowchart.min.js"></script>
+    <script src="{{ site.baseurl}}js/editor.md/lib/raphael.min.js"></script>
+    <script src="{{ site.baseurl}}js/editor.md/lib/underscore.min.js"></script>
+    <script src="{{ site.baseurl}}js/editor.md/lib/sequence-diagram.min.js"></script>
+    <script src="{{ site.baseurl}}js/editor.md/lib/jquery.flowchart.min.js"></script>
+    <script src="{{ site.baseurl}}js/editor.md/editormd.min.js"></script>
+    <script src="{{ site.baseurl}}js/jsTree/jstree.js"></script>
+    <script src="{{ site.baseurl}}js/start.js"></script>  
+    <!-- <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            processEscapes: true
+          }
+        });
+      </script> -->
+    <!-- <script type="text/javascript" src="{{ site.baseurl}}js/mathJax/MathJax.js?config=TeX-AMS_HTML"> -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                processEscapes: true
+              }
+            });
+          </script>
 </body>
+
 </html>
