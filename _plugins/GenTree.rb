@@ -107,7 +107,7 @@ module Reading
             # 移除路径中开头的多余的斜杠，这样才能使用baseurl
             str = path[0]
             path = str.slice(1,str.length)
-            str = '<li><a href="'+ @@site.baseurl + path +'">'+basename+'</a></li>'
+            str = '<li><a href="'+ @@site.baseurl+ "/" + path +".html"'">'+basename+'</a></li>'
           else
             str = '<li><a href="' + path[0]+'">'+basename+'</a></li>'
           end
