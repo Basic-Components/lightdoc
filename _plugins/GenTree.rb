@@ -7,7 +7,7 @@ module Reading
   require 'find'
   class Generator < Jekyll::Generator
 
-    @@debug = false # 调试模式下，始终重新生成目录文件
+    @@debug = true # 调试模式下，始终重新生成目录文件
 
     @@docs_root_dir = File.dirname(__FILE__) + "/../docs"
 
